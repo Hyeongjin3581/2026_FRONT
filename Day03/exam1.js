@@ -197,8 +197,25 @@ document.querySelector(' h3 ').innerHTML = `결과 : ${판별}`         // 해�
 // [지문9] 두 사람의 이름을 prompt함수로 각 입력받아서 만일 이름이 '유재석' 이면 뒤에 
 // (방장) 이라고 이름 뒤에 붙이고 아니면 생략한다. HTML의 <ol> 에 결과를 출력하시오.
 
+/*
 let 이름1 = prompt("첫번째 이름을 작성하시오 : ")
 let 이름2 = prompt("두번째 이름을 작성하시오 : ")
 let 판별1= 이름1 == '유재석' ? 이름1 + "(방장)" : 이름1
 let 판별2= 이름2 == '유재석' ? 이름2 + "(방장)" : 이름2
 document.querySelector('ol').innerHTML = `결과 : <li> ${판별1} </li> <li> ${판별2}</li>`
+*/
+
+// 증감연산자
+let age = 40
+console.log( age++ )        //  40으로 출력되고, 이후 41로 출력됨.
+console.log( ++age )        //  42로 바로 출력됨.
+console.log( --age )          // 41로 바로 출력됨.
+console.log( age-- )          // 41로 출력되고 이후 40으로 출력됨.
+
+// 변수에 1증가 코드
+age ++ 
+// vs
+age = age + 1
+// vs
+age += 1
+// 셋 다 동일한 값이 나온다.
