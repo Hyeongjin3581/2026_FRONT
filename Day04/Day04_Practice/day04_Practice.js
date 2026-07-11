@@ -62,12 +62,12 @@ let 결과 = seatList[선택번호] == 'X'  // 3. 처리
 if(결과){console.log('예약 성공');} //4. 출력
 else{console.log('예약 실패');}
 
-
 */
-/*내가 쓴 답
-// let 좌석 = Number(prompt("좌석 번호(0 ,1 ,2)중 하나를 입력해주세요."))
-// if(좌석 == 1){console.log('예약 성공')}
-// else{console.log('예약 실패')}
+/*
+//내가 쓴 답
+let 좌석 = Number(prompt("좌석 번호(0 ,1 ,2)중 하나를 입력해주세요."))
+if(좌석 == 1){console.log('예약 성공')}
+else{console.log('예약 실패')}
 */
 
 /*문제 6: 점수에 따른 상품 지급
