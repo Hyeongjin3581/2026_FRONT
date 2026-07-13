@@ -44,3 +44,9 @@
     text-decoration: line-through underline overline;     /*밑줄*/
     text-align: center; 
 }
+
+.box {
+    width: 50vw;
+    height: 50vh;
+    background-color: skyblue;
+}
