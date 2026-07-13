@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang='en'>
 <head>
-    
+         <link href="06Exam1.css" rel="stylesheet"> 
 </head>
 <body>
-    
-    <script src ="06Exam.js"></script>
+        <!-- 
+                HTML :  이동 가능한 텍스트 마크업 언어                  ex) 헤더
+                CSS : Cascading ( 위에서 아래로 흐름 ) style ( 꾸미기 ) sheet ( 덮는 )  ex) 옷
+                    -> 위에서 아래로 (HTML) 꾸미기 시트를 덮는다.  
+                JS :  자바스크립트 프로그래밍 언어                          ex) 동작(이벤트)
+            -->
+        <!-- CSS 적용하는 방법 1. : 인라인(마크업내 style 속성 이용) , 끝부분에 ; 사용 필수.  -->
+
+        <h1 style=" color : red ; ">
+            CSS방법1
+        </h1>
+
+        <!-- CSS 적용하는 방법2. : <head>마크업에 <style>마크업 사용. {중괄호}사용. 끝부분에 ; 사용 필수.-->
+
+        <style>
+            h2{ color : blue; } 
+        </style>
+
+        <h2> 
+            CSS방법2 
+        </h2>
+
+
+        <!--  ★ CSS 적용하는 방법3. : .css 파일에 css문법 작성, <head> 마크업에 적용 ★ -->
+        <!--  <link href="06Exam1.css" rel="stylesheet">  -->
+
+        <h3> CSS선택자1 </h3>
+        <h4 class="구역1"> CSS선택자2 </h4>  <!-- 복수명 사용 가능.(중복가능)-->
+        <h5 id="구역2"> CSS선택자3 </h5>      <!-- 1개 id만 사용 가능.(식별자라 중복x)-->
+        <h6 id="구역3"> CSS선택자4 </h6>   
+
+
+
+        <!-- 주위할점 : 하위요소 마크업 작성시 tap키 (들여쓰기) -->
+        <div>                                       <!-- 상위요소 body , 하위요소 : h3-->
+                 <h3> 학생명단 </h3>    <!--상위요소 div , 하위요소 x-->
+                 <ol>                            <!--상위요소 div, 하위요소 li-->   ,
+                        <li id="이름1">유재석</li>       <!--상위요소ol, 하위요소 x-->
+                        <h3>강호동</h3> 
+
+                 </ol>
+
+        </div>
+
+        <h2> CSS 텍스트 주요 속성</h2>
+        <h1 class="title"> 강아지 </h1>
+        <div class="text"> 
+            개는 중형 동물이자 가장 널리 분포하며 개체 수가 가장 많은 지상 동물 중 하나이며 가축화된 회색늑대이다. 개는 인류가 최초로 가축으로 삼은 동물로 알려져 있으며, 역사적으로 반려견, 사냥견으로서 길러 왔다. 
+        </div>
+        <p class="작성자"> 위키백과 </p>
+
+
+
 
 </body>
 </html>
