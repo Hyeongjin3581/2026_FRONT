@@ -1,0 +1,46 @@
+.title{
+    font-family: "궁서체" ; 
+    font-style: italic;  
+}
+.본문{
+    font-weight: 1000; 
+    color:blue;
+    letter-spacing: 2px;        /* 자간 */
+    word-spacing: 10px;     /* 어간 */
+    line-height: 1.6;           /* 행간 */
+}
+
+.부제목1{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 1000; 
+    color :  red; 
+    text-decoration: line-through underline overline;     /*밑줄*/
+    text-align: center; 
+    font-weight: bold;
+
+}
+
+.부제목2{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: "HY헤드라인M";
+    color :  red; 
+    text-decoration: line-through underline overline;     /*밑줄*/
+    text-align: center; 
+    font-weight: bold;
+
+}
+
+.본문2{
+    font-weight: 1000; 
+    color:blue;
+    letter-spacing: 2px;        /* 자간 */
+    word-spacing: 10px;     /* 어간 */
+    line-height: 1.6;           /* 행간 */
+}
+
+.부제목3{
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    color :  red; 
+    text-decoration: line-through underline overline;     /*밑줄*/
+    text-align: center; 
+}

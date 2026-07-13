@@ -1,7 +1,9 @@
 #output{
     white-space: pre;
     font-family: monospace;
+    text-align: center;  
 }
-h3{ background-color: black; }
-h3{ color:white; }
-/* 210 , 530*/
+h3{ background-color: black; 
+width:fit-content;}
+h3{ color:white; 
+letter-spacing: 10px;}
