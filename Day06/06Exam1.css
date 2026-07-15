@@ -62,7 +62,7 @@ h3 , h4 { color:chocolate;}
     text-decoration: underline;     /*밑줄*/
     text-decoration:overline;           /*윗줄*/
     text-decoration: line-through;     /*취소선*/
-    text-shadow: 10px 20px blue ;      /* text-shadow: x(좌- / 우+) 
+    text-shadow:10px 20px blue ;      /* text-shadow: x(좌- / 우+) 
                                         y(위- / 아래+) blur(흐림 정도, 0=선명) color(그림자 색상) */
     color: green;                 /* 1. 색상명 */
     color: rgb(225, 224, 225);    /* 2. RGB 색상 */
