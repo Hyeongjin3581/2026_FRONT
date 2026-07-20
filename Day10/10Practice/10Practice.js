@@ -92,42 +92,31 @@ const students = [
   { name: '박민준', score: 78 }
 ];*/
 
-const students = [
-  { name: '김철수', score: 85 },
-  { name: '이영희', score: 92 },
-  { name: '박민준', score: 78 }
-];
-
-//         let highscore = 0;
-//         let highname="";
-
-// for(let i =0; i<=students.length-1;i++){
+// const students = [
+//   { name: '김철수', score: 85 },
+//   { name: '이영희', score: 92 },
+//   { name: '박민준', score: 78 }
+// ];
 
 
-//         if(students[i].score > highscore){
-//             highscore = students[i].score;
-//             highname = students[i].name
+// function findLongestWord(x){
+//     let highscore = 0;
+//     let highname="";
+
+//     for(let i =0; i<=x.length-1;i++){
+//         if(x[i].score > highscore){
+//             highscore = x[i].score;
+//             highname = x[i].name;
 //         }
 //     }
 
-// // console.log(highname , highscore)
+//     return highname;
+//     console.log(highname)
+//     // console.log(highscore)
+// }
+// let 결과3 = findLongestWord(students)
 
-function findLongestWord(x){
-    for(let i =0; i<=x.length-1;i++){
-        
-let highscore = 0;
-let highname="";
-
-        if(x[i].score > highscore){
-            highscore = x[i].score;
-            highname = x[i].name
-        }
-    }
-    return;
-}
-let 결과3 = findLongestWord(students)
-
-console.log(결과3)
+// console.log(결과3)
 
 
 /*실습 6: 상품 목록 페이지 만들기
@@ -135,25 +124,76 @@ console.log(결과3)
 각 상품은 이름(<h4>), 가격(<p>), 재고(<p>)를 포함한 div로 묶여야 합니다.
 
 const products = [
-
   { name: '노트북', price: 1200000, stock: 5 },
   { name: '모니터', price: 350000, stock: 12 },
   { name: '키보드', price: 80000, stock: 25 }
-
 ];*/
+
+// const products = [
+//   { name: '노트북', price: 1200000, stock: 5 },
+//   { name: '모니터', price: 350000, stock: 12 },
+//   { name: '키보드', price: 80000, stock: 25 }
+// ];
+
+// function renderProducts(x){
+//     let htmlString="";
+//     for(let i = 0; i<=x.length-1;i++){
+//         htmlString +=`
+//             <div>
+//                 <h4>${x[i].name}</h4>
+//                 <p>가격: ${x[i].price}원</p>
+//                 <p>재고: ${x[i].stock}개</p>
+//             </div>
+//         `;
+//     }
+//   document.querySelector('div').innerHTML =htmlString
+// }
+
+// renderProducts(products)
+
 
 
 /*실습 7: 간단한 계산기
 num1, num2, operator ( '+', '-') 세 개의 매개변수를 받는 calculator 함수를 만드시오.
 operator가 '+'이면 두 수의 합을, '-'이면 두 수의 차를 콘솔에 출력하시오. (if문 사용)*/
 
+// function calculator(){
+//     let num1=3;
+//     let num2=5;
+//     let operator='+';
+//     let 결과 = 0
+//     if(operator =='+'){
+//         결과 = num1 + num2;
+//         console.log(결과)
+//     }else{
+//         결과 = num1 - num2;
+//         console.log(결과)
+//     }
+// }
 
+// calculator()
 
 /*실습 8: HTML 리스트(ul, li) 동적 생성
 todoList라는 할 일 목록이 담긴 전역 배열이 있습니다.
 renderList() 함수를 정의하시오. 이 함수는 todoList 배열을 순회하며 <li>할 일 내용</li> 형태의 HTML 문자열을 만듭니다.
 최종적으로 이 문자열을 HTML <ul> 태그로 표현하여 리스트를 화면에 그리시오.
 let todoList = ['장보기', '운동하기']*/
+
+// let todoList = ['장보기', '운동하기','집가서쉬기'];
+
+// function renderList(x){
+//     let html = "";
+//     for(let i = 0; i<=x.length-1; i++){
+//         html+=`
+//         <ul>
+//             <li>${x[i]}</il>
+//         </ul>
+//         `;
+//     }
+//     document.querySelector('ul').innerHTML = html
+// }
+
+// renderList(todoList)
 
 
 /*실습 9: 입장료 계산 함수
@@ -164,4 +204,18 @@ let todoList = ['장보기', '운동하기']*/
 계산된 가격 문자열을 반환(return)하시오.*/
 
 
+let age = 19
+
+function getTicketPrice(age){
+    if(age < 8){
+        console.log("무료");
+    }else if(age <= 19){
+        console.log("5,000원");
+    }else{
+        console.log("10,000원")
+    }
+    return;
+}
+
+getTicketPrice(age)
 
