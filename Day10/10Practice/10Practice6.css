@@ -1,5 +1,5 @@
 /* 전체 레이웃 확인 => 추후에 완성후 제거 예정 */
-/* *{ border: 1px solid red; } */
+*{ border: 1px solid red; }
 #header{ 
     width: 1280px; /* 구역 가로 사이즈 */
     margin: 0 auto; /* 구역 가로 가운데 정렬 */
@@ -76,6 +76,8 @@ li{ list-style-type: none; } /* li 항목 글머리 제거 */
     display: block;     /* 이미지 마크업은 display: inline 이 기본값이므로 block으로 변경하여 중앙정렬. */
     margin: 0 auto;     /* 중앙 맞추기 */
 }
+
+/*===========================================================*/
 
 #footer{
     margin-top: 20px;

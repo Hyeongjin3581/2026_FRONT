@@ -1,0 +1,75 @@
+/* 전체 레이웃 확인 => 추후에 완성후 제거 예정 */
+/* *{ border: 1px solid red; } */
+#header{ 
+    width: 1280px; /* 구역 가로 사이즈 */
+    margin: 0 auto; /* 구역 가로 가운데 정렬 */
+}
+#main{ width: 1280px;margin: 0 auto; }
+/* 자주 사용되는 기본CSS */
+*{ 
+    box-sizing: border-box; /* content+padding 포함 사이즈 정의 */
+    padding: 0px; margin: 0px; /* 기본여백 제거 */
+}
+a{
+    text-decoration: none; /* a하이퍼링크 밑줄 제거 */
+    color: black; /* a하이퍼링크 색상 검정 */
+}
+li{ list-style-type: none; } /* li 항목 글머리 제거 */
+
+/*===============================================*/
+
+#footer{
+    display: flex;
+    margin-top: 20px;
+    background-color: #2A2D32;
+    margin-bottom: 60px;
+    width: 800px;
+    height: 100px;
+    justify-content: center;
+    margin: 0 auto; 
+}
+
+
+.footer_left{
+    font-style: bold;
+    color: white;
+    padding-top: 20px;
+    padding-right: 5%;
+    justify-content: center;
+}
+
+.footer_left > div > h6{
+    font-size: 7px;
+}
+
+.footer_left > div > h4{
+    font-size: 10px;
+}
+
+
+
+.footer_middle1{
+    color: white;
+    margin: 0 auto;
+    padding-top: 23px;
+    padding-bottom: 5px;
+    font-size: 5px;
+}
+
+.footer_middle2{
+    color: white;
+    margin: 0 auto;
+    padding-top: 3px;
+    font-size: 4px;
+}
+
+.footer_right{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px; 
+    padding-left: 60px;
+}
+
+.footer_right > div > img {
+    width: 10px;
+}
