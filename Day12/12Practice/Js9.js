@@ -161,12 +161,16 @@ function employeeAdd( ){
             alert("직급명을 입력해주세요");
             return;
         }
+        if (dcode == -1) {
+            alert("등록되지 않은 부서입니다.");
+            return;
+        }
     // 부서번호 찾기
     let dcode = 0
     for (let i = 0; i < departmentList.length; i++) {
         if (departmentList[i].dname == dname) {
             dcode = departmentList[i].dcode
-            break
+            break;
         }
     }
 
