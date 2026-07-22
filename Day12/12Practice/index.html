@@ -346,15 +346,16 @@
           </div>
 
           <div class="input-row">
-            <div class="form-group">
-              <label class="dname">부서</label>
-              <select>
-                <option disabled selected hidden>부서를 선택하세요</option>
-                <option>개발팀</option>
-                <option>디자인팀</option>
-                <option>기획팀</option>
-              </select>
-            </div>
+                <div class="form-group">
+                    <label>부서</label>
+                    <select class="dname">
+                      <option value="" disabled selected hidden>부서를 선택하세요</option>
+                      <option value="개발팀">개발팀</option>
+                      <option value="디자인팀">디자인팀</option>
+                      <option value="기획팀">기획팀</option>
+                    </select>
+                </div>
+                
             <div class="form-group">
               <label>사진</label>
               <input class="eimg"  type="file">
@@ -416,7 +417,7 @@
       </div>
     </section>
 
-    <!-- 3열: 사원 휴가 신청 및 전체 목록 -->
+     <!-- 3열: 사원 휴가 신청 및 전체 목록 -->
     <section class="col-right">
       <!-- 휴가 신청 카드 -->
       <div class="card">
@@ -449,7 +450,7 @@
           </div>
 
           <div class="btn-right-align">
-            <button type="button" class="btn btn-teal">신청</button>
+            <button type="button" class="btn btn-teal" onclick="vacationAdd()">신청</button>
           </div>
         </form>
       </div>
@@ -462,7 +463,7 @@
           <div class="user-name">김민준</div>
           <div class="date">2025-08-04 ~ 2025-08-04</div>
           <div class="reason">사유: 병원 진료</div>
-          <button type="button" class="btn-cancel">신청취소</button>
+          <button type="button" class="btn-cancel" >신청취소</button>
         </div>
 
         <div class="vacation-card">
@@ -476,7 +477,7 @@
 
   </div>
 
-  <script src="Js9.js"></script>
-
+<script src="Js9.js"></script>
 </body>
+
 </html>
