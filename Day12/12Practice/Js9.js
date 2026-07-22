@@ -110,8 +110,8 @@ function employeePrint() {
                     <td>${dname}</td>
                     <td>${employee.position}</td>
                     <td class="action-links align-right">
-                        <a href="#" class="updateBtn"onclick="employeeUpdate(${employee.ecode}); return false;">수정</a>
-                        <a href="#" class="deleteBtn"onclick="employeeDelete(${employee.ecode}); return false;">삭제</a>
+                        <a href="#" class="updateBtn"onclick="employeeUpdate(${employee.ecode}); ">수정</a>
+                        <a href="#" class="deleteBtn"onclick="employeeDelete(${employee.ecode}); ">삭제</a>
                     </td>
                 </tr>
                  `;
