@@ -74,17 +74,16 @@ function productPrint( ){
     let tbody = document.querySelector( '#main table tbody' )
     // 2. 무엇을 , 배열내 모든 객체(자료) 들을 HTML(문자열)형식 구성
     let html = ""
-    for( let index = 0 ; index <= productList.length-1 ; index++ ){
-        let product = productList[index] // index번째 제품객체 1개 
-        // ++ 현재 index번째 제품의 카테고리번호에 해당하는 카테고리명 찾기
+    for( let i = 0 ; i <= productList.length-1 ; i++ ){
+        let product = productList[i] // i번째 제품객체 1개 
+        // ++ 현재 i번째 제품의 카테고리번호에 해당하는 카테고리명 찾기
         let cname = ''
-        for( let j = 0 ; j <= categoryList.length-1 ; j++ ){
-            if( categoryList[j].ccode == product.ccode ){ // 만약에 카테고리내 카테고리번호 와 제품의 카테고리번호 같다면 
+        for(let j = 0 ; j <= categoryList.length-1 ; j++){
+            if(categoryList[j].ccode == product.ccode){ 
                 cname = categoryList[j].cname;
-                break; // 찾았으면 끝 
+                break; 
             }
         } 
-        // 만일 샘플 HTML 존재하면 복사 해서 `백틱 사이 붙여넣기 , 변수 자리에 ${ } 변경 
         html += `<tr>
                     <td> <img src=${ product.pimg } /> </td>
                     <td> ${ cname } </td> <td> ${ product.pname } </td> 
@@ -102,9 +101,9 @@ function productPrint( ){
 // [2] 삭제 함수 , 삭제할 제품코드 매개변수로 받아온다.
 function productDelete( pcode ){
     // 1. 삭제할 pcode의 제품객체를 배열에서 찾는다.
-    for( let index = 0 ; index <= productList.length-1 ; index++ ){
-        if( productList[index].pcode == pcode ){
-            productList.splice( index , 1 ); // 2. 배열에서 요소 삭제 . splice( 인덱스번호 , 개수 )
+    for( let i = 0 ; i <= productList.length-1 ; i++ ){
+        if( productList[i].pcode == pcode ){
+            productList.splice( i , 1 ); // 2. 배열에서 요소 삭제 . splice( 인덱스번호 , 개수 )
             alert('삭제 성공');
             productPrint() // 3. 조회구역 최신화
             return // 주의할점 구분 : return function{}탈출  VS break for{}탈출
@@ -114,12 +113,12 @@ function productDelete( pcode ){
 // [3] 수정 함수
 function productUpdate( pcode ){
     // 1. 수정할 pcode의 제품객체를 배열에서 찾는다.
-    for( let index = 0 ; index <= productList.length-1 ; index++ ){
-        if( productList[index].pcode == pcode ){
+    for( let i = 0 ; i <= productList.length-1 ; i++ ){
+        if( productList[i].pcode == pcode ){
             let newPname = prompt('수정할 제품명 입력하세요.')
             let newPprice = prompt('수정할 가격 입력하세요.')
-            productList[index].pname = newPname // 2. 배열에서 특정한 요소값 수정 
-            productList[index].pprice = newPprice
+            productList[i].pname = newPname // 2. 배열에서 특정한 요소값 수정 
+            productList[i].pprice = newPprice
             productPrint(); return;
         } //if end 
     } // for end 
