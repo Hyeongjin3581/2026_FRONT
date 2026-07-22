@@ -74,13 +74,9 @@ let employeeList = [
     { 'ecode' : 1 , 'eimg' :'https://placehold.co/100x100', 'ename' : '김민준' , 'dcode' : 1 , 'eposition': '선임 개발자'} , 
     { 'ecode' : 2 , 'eimg' :'https://placehold.co/100x100', 'ename' : '이서연' , 'dcode' : 2 , 'eposition': '수석 디자이너'} ,
     {'ecode' : 3 , 'eimg' :'https://placehold.co/100x100', 'ename' : '박도윤' , 'dcode' : 3 , 'eposition': '팀장'}
-]// ecode = 사원번호 , eimg = 사원사진, ename = 사원이름 , dcode = 부서이름 
-
-// 궁금한점 1.  dcode는 순전히 부서코드인데, 부서코드 == 부서명??? 
-// 2. 만약, 부서코드 == 부서명이면, dcode는 어느 객체에 할당받아야?? 
-// ex) 사원명 ename => name으로 할당.
-// 사원코드는 부서코드로 할당..? 말이 안되는데
-//
+]
+// ecode = 사원번호 , eimg = 사원사진, ename = 사원이름 , 
+// dcode = 부서번호 , dname = 부서이름 , eposition = 직급
 
 
 // [1] 전체조회 함수 
