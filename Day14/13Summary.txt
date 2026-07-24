@@ -26,3 +26,5 @@
         let param = setInterval(함수명, 밀리초) : 밀리초(1/1000) 마다 지정한 함수가 실행
         clearInterval(인터벌객체)                       : 인터벌 종료/삭제
         
+
+내이름맑음
