@@ -19,73 +19,83 @@ let departmentList = [
 ]
 
 
-// ============================ 1열 ================================
+// 1열 ==========================================================================================================================================================================
 
 // [1] 전체조회 함수 
-// departmentPrint()
+departmentPrint()
 function departmentPrint() {
-    let tbody = document.querySelector('.deptTbody')
+    let tbody = document.querySelector('.col-left > .card > table > tbody')
     let html = ""
     for (let i = 0; i <= departmentList.length - 1; i++) {
         let department = departmentList[i]
         html += `<tr>
-                    <td>${department.dname}</td>
-                    <td>
-                        <button class="updateBtn" onclick="departmentUpdate(${department.dcode})">수정</button>
-                        <button class="updateBtn1" onclick="departmentDelete(${department.dcode})">삭제</button>
-                    </td>
-                 </tr>`
+              <td>${departmentList[i].dname}</td>
+              <td class="action-links align-right">
+                <a href="#" class="link-edit" onclick = 'departmentUpdate(${departmentList[i].dcode})'>수정</a>
+                <a href="#" class="link-delete" onclick = 'departmentDelete(${departmentList[i].dcode})'>삭제</a>
+              </td>
+            </tr>`
     }
     tbody.innerHTML = html
 }
 
+let finaldcode = 3; //마지막으로 쓴 부서번호(전역변수)
 function departmentAdd() {
-    let input = document.querySelector('.deptNameInput')
-    let dname = input.value
-
-    if (dname == "") {
+    let department = document.querySelector('.col-left > .card > .dept-input-group > input').value
+    if (department == "") {
         alert('부서명을 입력하세요.')
         return
     }
 
     for (let i = 0; i <= departmentList.length - 1; i++) {
-        if (departmentList[i].dname == dname) {
+        if (departmentList[i].dname == department) {
             alert('이미 존재하는 부서입니다.')
             return
         }
     }
-
-    let object = { dcode: finaldcode + 1, dname: dname }
-    departmentList.push(object)
     finaldcode += 1
+    let object = { dcode: finaldcode, dname: department }
+    departmentList.push(object)
+    console.log(object)
 
-    input.value = ""
+    department.value = ""
     departmentPrint()
+    employeePrint()
+    vacationPrint()
 }
 // [3] 수정 함수
 function departmentUpdate(dcode) {
     for (let i = 0; i <= departmentList.length - 1; i++) {
         if (departmentList[i].dcode == dcode) {
-            let newdname = prompt('수정할 부서명을 입력하세요.', departmentList[i].dname)
+            let newdname = prompt('수정할 부서명을 입력하세요.')
             if (newdname == null || newdname == "") { return }
             departmentList[i].dname = newdname
             departmentPrint()
+            employeePrint()
+            vacationPrint()
             return
         }
     }
 }
 
 function departmentDelete(dcode) {
+    for(let index = 0; index <= employeeList.length - 1; index++){
+        if (dcode == employeeList[index].dcode) {
+            alert("부서에 소속되어 있는 인원이 존재합니다.")
+            return;
+        }
+    }
     for (let i = 0; i <= departmentList.length - 1; i++) {
         if (departmentList[i].dcode == dcode) {
             departmentList.splice(i, 1)
             alert('삭제 성공')
             departmentPrint()
+            employeePrint()
+            vacationPrint()
             return
         }
     }
 }
-
 //     <!-- 2열: 사원 등록 및 사원 목록 --> ===========================================
 
 // [1] 전체조회 함수
